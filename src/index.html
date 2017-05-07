@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <title>Angular Starter</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- build:css assets/bundle.css -->
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css">
+  <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+  <!-- app:css -->
+  <link rel="stylesheet" href="/assets/styles/main.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+
+<body>
+  <as-main-app>
+    <i class="center-fix main-spinner fa fa-spin fa-spinner"></i>
+  </as-main-app>
+
+  <!-- build:js assets/lib.js -->
+
+  <!-- Non-module JS libs -->
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.5.1/videojs-contrib-hls.min.js"></script>
+  <script src="../node_modules/videojs-youtube/dist/Youtube.min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="../node_modules/core-js/client/shim.min.js"></script>
+
+  <!-- Load libraries -->
+  <script src="../node_modules/zone.js/dist/zone.js"></script>
+
+  <!-- endbuild -->
+
+  <!-- build:js assets/app.js -->
+  <script src="tmp/app/bundle.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:remove -->
+  <script src="../node_modules/systemjs/dist/system.js"></script>
+  <script src="systemjs.conf.js"></script>
+  <script>
+    System.import('app/main.js')
+      .catch(function (err) { console.error(err); });
+  </script>
+  <!-- endbuild -->
+</body>
+
+</html>

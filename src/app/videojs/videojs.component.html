@@ -1,0 +1,9 @@
+<video
+    *ngIf="config"
+    id="video_{{config.id}}"
+    class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
+    controls preload="auto"
+    data-setup='{ "techOrder": ["html5", "youtube"]}'
+    width="640" height="264">
+    <source [src]="config.url" [type]="config.type" />
+</video>
